@@ -8,5 +8,14 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts']
+  },
+  server: {
+    proxy: {
+      '/weather': {
+        target: 'https://api.map.baidu.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/weather/, '/weather/v1')
+      }
+    }
   }
 })

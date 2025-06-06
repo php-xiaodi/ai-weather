@@ -45,11 +45,11 @@ export async function getCurrentPosition(): Promise<GeolocationPosition> {
 
 export async function getWeatherByLocation(lat: number, lng: number): Promise<WeatherResponse> {
   // 这里需要替换为您的百度地图API密钥
-  const ak = 'YOUR_BAIDU_MAP_AK';
+  const ak = 'T8AfAEOXVNlgWiOJQZssPK6zYjYYlyzW';
   
   try {
     const response = await fetch(
-      `https://api.map.baidu.com/weather/v1/?district_id=110100&data_type=all&ak=${ak}&location=${lat},${lng}`,
+      `/weather/?district_id=110100&data_type=all&ak=${ak}&location=${lat},${lng}`,
       {
         method: 'GET',
         headers: {

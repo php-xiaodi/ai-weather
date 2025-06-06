@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import SideNav from './components/SideNav.vue'
+import WeatherDisplay from './components/WeatherDisplay.vue'
 </script>
 
 <template>
   <div class="app">
     <SideNav />
     <main class="main-content">
-      <h1>AI Weather</h1>
+      <WeatherDisplay />
     </main>
   </div>
 </template>
@@ -19,7 +20,7 @@ import SideNav from './components/SideNav.vue'
 
   color-scheme: light dark;
   color: #242424;
-  background-color: #ffffff;
+  background-color: #f4f6f8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,5 +47,6 @@ body {
 .main-content {
   flex: 1;
   padding: 2rem;
+  background-color: #f4f6f8;
 }
 </style>
